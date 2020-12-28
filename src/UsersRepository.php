@@ -1,5 +1,9 @@
 <?php
 
+/*************
+ *    RAB
+ *************/
+
 namespace App;
 
 use App\Entity\AssocUsers;

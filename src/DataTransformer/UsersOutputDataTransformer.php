@@ -1,5 +1,8 @@
 <?php
 
+/*************
+ *    RAB
+ *************/
 
 namespace App\DataTransformer;
 
@@ -10,14 +13,14 @@ use ApiPlatform\Core\DataTransformer\DataTransformerInterface;
 
 class UsersOutputDataTransformer extends AbstractController implements DataTransformerInterface
 {
-
     /**
      * @inheritDoc
      */
     public function transform($data, string $to, array $context = [])
     {
-        $output=new UsersOutput();
-        $idUser=$data->getIdUser();
+        // to select each user
+        $output = new UsersOutput();
+        $idUser = $data->getIdUser();
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQueryBuilder();
         $query->select('u.iduser,u.firstname,u.lastname,u.phonenumber,u.password,u.isvolunteer,u.emailadress');
@@ -26,18 +29,13 @@ class UsersOutputDataTransformer extends AbstractController implements DataTrans
         $qb = $query->getQuery();
         $result = $qb->getResult();
 
+        // to keep in arrays user data
         $firstname = [];
         $lastname = [];
-        $phonenumber= [];
-        $password=[];
-        $isvolunteer=[];
-        $emailadress=[];
-        $prefix = "http://127.0.0.1:8001/";
-
-        $chaine = (string)$idUser;
-        $allUsers = ['rel' => 'all-users', 'href' => $prefix . "api/user/"];
-        $selfUser = ['rel' => 'self', 'href' =>$prefix . "api/user/" . $chaine];
-        $links=array($allUsers,$selfUser);
+        $phonenumber = [];
+        $password = [];
+        $isvolunteer = [];
+        $emailadress = [];
 
         foreach ($result as $key => $value) {
 
@@ -52,12 +50,22 @@ class UsersOutputDataTransformer extends AbstractController implements DataTrans
             }
             if (!in_array($value["password"], $password)) {
                 array_push($password, $value["password"]);
-            } if (!in_array($value["isvolunteer"], $isvolunteer)) {
+            }
+            if (!in_array($value["isvolunteer"], $isvolunteer)) {
                 array_push($isvolunteer, $value["isvolunteer"]);
-            } if (!in_array($value["emailadress"], $emailadress)) {
+            }
+            if (!in_array($value["emailadress"], $emailadress)) {
                 array_push($emailadress, $value["emailadress"]);
             }
         }
+
+        // to respect HATEOAS rules
+        $prefix = "http://127.0.0.1:8001/";
+        $chaine = (string)$idUser;
+        $allUsers = ['rel' => 'all-users', 'href' => $prefix . "api/user/"];
+        $selfUser = ['rel' => 'self', 'href' => $prefix . "api/user/" . $chaine];
+        $links = array($allUsers, $selfUser);
+
 
         $msg = [
             "id" => $idUser,
@@ -79,6 +87,6 @@ class UsersOutputDataTransformer extends AbstractController implements DataTrans
      */
     public function supportsTransformation($data, string $to, array $context = []): bool
     {
-        return UsersOutput::class === $to ;
+        return UsersOutput::class === $to;
     }
 }

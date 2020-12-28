@@ -1,5 +1,9 @@
 <?php
 
+/*************
+ *    RAB
+ *************/
+
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -14,8 +18,12 @@ use App\Dto\UsersOutput;
  *
  * @ApiResource(
  *      output=UsersOutput::class,
- *      collectionOperations={"get"={"path"="user"}},
- *      itemOperations={"get"={"path"="user/{id}"}},
+ *      collectionOperations={"get"={"path"="user/"},"post"={"path"="user/post"}},
+ *      itemOperations={
+ *     "get"={"path"="user/{id}"},
+ *     "put"={"path"="user/put/{id}"},
+ *     "delete"={"path"="user/delete/{id}"}
+ *     },
  *      shortName="user",
  *      formats={"json"}
  * )
