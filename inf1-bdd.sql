@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 29 déc. 2020 à 16:40
+-- Généré le :  mar. 29 déc. 2020 à 17:02
 -- Version du serveur :  10.4.6-MariaDB
 -- Version de PHP :  7.3.9
 
@@ -38,6 +38,19 @@ CREATE TABLE `event` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `facture`
+--
+
+CREATE TABLE `facture` (
+  `id_facture` int(10) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `date` datetime NOT NULL,
+  `id_user` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `registered`
 --
 
@@ -53,6 +66,7 @@ CREATE TABLE `registered` (
 --
 
 CREATE TABLE `tasks` (
+  `id_task` int(10) NOT NULL,
   `task_name` varchar(250) NOT NULL,
   `id_taskgroup` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -97,6 +111,13 @@ ALTER TABLE `event`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `facture`
+--
+ALTER TABLE `facture`
+  ADD PRIMARY KEY (`id_facture`),
+  ADD KEY `id_user_facture` (`id_user`);
+
+--
 -- Index pour la table `registered`
 --
 ALTER TABLE `registered`
@@ -107,6 +128,7 @@ ALTER TABLE `registered`
 -- Index pour la table `tasks`
 --
 ALTER TABLE `tasks`
+  ADD PRIMARY KEY (`id_task`),
   ADD KEY `id_taskgroup` (`id_taskgroup`);
 
 --
@@ -133,6 +155,18 @@ ALTER TABLE `event`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `facture`
+--
+ALTER TABLE `facture`
+  MODIFY `id_facture` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `tasks`
+--
+ALTER TABLE `tasks`
+  MODIFY `id_task` int(10) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `task_group`
 --
 ALTER TABLE `task_group`
@@ -147,6 +181,12 @@ ALTER TABLE `user`
 --
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `facture`
+--
+ALTER TABLE `facture`
+  ADD CONSTRAINT `id_user_facture` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`);
 
 --
 -- Contraintes pour la table `registered`
