@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le :  mar. 29 déc. 2020 à 17:02
--- Version du serveur :  10.4.6-MariaDB
--- Version de PHP :  7.3.9
+-- Hôte : 127.0.0.1:3308
+-- Généré le :  mar. 29 déc. 2020 à 16:26
+-- Version du serveur :  8.0.18
+-- Version de PHP :  7.4.3-dev
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `inf1`
+-- Base de données :  `inf1-bdd`
 --
 
 -- --------------------------------------------------------
@@ -28,11 +28,13 @@ SET time_zone = "+00:00";
 -- Structure de la table `event`
 --
 
-CREATE TABLE `event` (
-  `id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `event`;
+CREATE TABLE IF NOT EXISTS `event` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `start_date` datetime NOT NULL,
   `end_date` datetime NOT NULL,
-  `type` varchar(100) NOT NULL
+  `type` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -41,11 +43,14 @@ CREATE TABLE `event` (
 -- Structure de la table `facture`
 --
 
-CREATE TABLE `facture` (
-  `id_facture` int(10) NOT NULL,
+DROP TABLE IF EXISTS `facture`;
+CREATE TABLE IF NOT EXISTS `facture` (
+  `id_facture` int(10) NOT NULL AUTO_INCREMENT,
   `link` varchar(255) NOT NULL,
   `date` datetime NOT NULL,
-  `id_user` int(10) NOT NULL
+  `id_user` int(10) NOT NULL,
+  PRIMARY KEY (`id_facture`),
+  KEY `id_user_facture` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -54,9 +59,14 @@ CREATE TABLE `facture` (
 -- Structure de la table `registered`
 --
 
-CREATE TABLE `registered` (
+DROP TABLE IF EXISTS `registered`;
+CREATE TABLE IF NOT EXISTS `registered` (
+  `id_registered` int(10) NOT NULL AUTO_INCREMENT,
   `id_volunteer` int(10) NOT NULL,
-  `id_event` int(10) NOT NULL
+  `id_event` int(10) NOT NULL,
+  PRIMARY KEY (`id_registered`),
+  KEY `id_volunteer` (`id_volunteer`),
+  KEY `id_event` (`id_event`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -65,10 +75,13 @@ CREATE TABLE `registered` (
 -- Structure de la table `tasks`
 --
 
-CREATE TABLE `tasks` (
-  `id_task` int(10) NOT NULL,
+DROP TABLE IF EXISTS `tasks`;
+CREATE TABLE IF NOT EXISTS `tasks` (
+  `id_task` int(10) NOT NULL AUTO_INCREMENT,
   `task_name` varchar(250) NOT NULL,
-  `id_taskgroup` int(10) NOT NULL
+  `id_taskgroup` int(10) NOT NULL,
+  PRIMARY KEY (`id_task`),
+  KEY `id_taskgroup` (`id_taskgroup`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -77,9 +90,12 @@ CREATE TABLE `tasks` (
 -- Structure de la table `task_group`
 --
 
-CREATE TABLE `task_group` (
-  `id_taskgroup` int(10) NOT NULL,
-  `id_event` int(10) NOT NULL
+DROP TABLE IF EXISTS `task_group`;
+CREATE TABLE IF NOT EXISTS `task_group` (
+  `id_taskgroup` int(10) NOT NULL AUTO_INCREMENT,
+  `id_event` int(10) NOT NULL,
+  PRIMARY KEY (`id_taskgroup`),
+  KEY `id_event_tg` (`id_event`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -88,95 +104,19 @@ CREATE TABLE `task_group` (
 -- Structure de la table `user`
 --
 
-CREATE TABLE `user` (
-  `id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `username` varchar(250) NOT NULL,
   `password` varchar(60) NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `phone_number` int(10) NOT NULL,
-  `is_admin` tinyint(1) NOT NULL DEFAULT 0,
-  `is_verified` tinyint(1) NOT NULL DEFAULT 0
+  `is_admin` tinyint(1) NOT NULL DEFAULT '0',
+  `is_verified` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `event`
---
-ALTER TABLE `event`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `facture`
---
-ALTER TABLE `facture`
-  ADD PRIMARY KEY (`id_facture`),
-  ADD KEY `id_user_facture` (`id_user`);
-
---
--- Index pour la table `registered`
---
-ALTER TABLE `registered`
-  ADD KEY `id_volunteer` (`id_volunteer`),
-  ADD KEY `id_event` (`id_event`);
-
---
--- Index pour la table `tasks`
---
-ALTER TABLE `tasks`
-  ADD PRIMARY KEY (`id_task`),
-  ADD KEY `id_taskgroup` (`id_taskgroup`);
-
---
--- Index pour la table `task_group`
---
-ALTER TABLE `task_group`
-  ADD PRIMARY KEY (`id_taskgroup`),
-  ADD KEY `id_event_tg` (`id_event`);
-
---
--- Index pour la table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `event`
---
-ALTER TABLE `event`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `facture`
---
-ALTER TABLE `facture`
-  MODIFY `id_facture` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `tasks`
---
-ALTER TABLE `tasks`
-  MODIFY `id_task` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `task_group`
---
-ALTER TABLE `task_group`
-  MODIFY `id_taskgroup` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- Contraintes pour les tables déchargées
