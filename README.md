@@ -2,7 +2,7 @@ API-NotrePartage
 ==
 
 L'api permet de gérer la partie back-end de l'application.
-Grâce aux méthodes implémenter dans l'API (GET,POST,PUT,DELETE) l'application pourra fournir des fonctionnalités comme :
+Grâce aux méthodes dans l'API l'application pourra fournir des fonctionnalités comme :
    -l'enregistrement des admins
    -l'inscription des bénévoles 
    -...
@@ -11,6 +11,7 @@ Pour lancer l'API
 ==
 
 L'API a été crée à l'aide d'API Platform de Symfony .
+On utilise Wamp et PhpMyAdmin pour la bdd.
 
 Pour lancer l'api il faut :
 
