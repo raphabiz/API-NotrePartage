@@ -3,10 +3,15 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * User
- *
+ * @ApiResource(
+ *     itemOperations={
+ *     "get"={"path"="user/{id}"}
+ *     }
+ * )
  * @ORM\Table(name="user")
  * @ORM\Entity
  */
