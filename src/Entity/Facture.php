@@ -3,15 +3,37 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
+use App\Dto\FactureOutput;
 
 /**
  * Facture
+ *
+ * @ApiResource(
+ *      itemOperations={
+ *         "get"={"path"="facture/{id}"}
+ *      },
+ *      collectionOperations={
+ *          "get"={
+ *              "method"="GET",
+ *              "output"=FactureOutput::class,
+ *              "path"="facture"
+ *          },
+            "post"={
+                "method"="POST",
+                "path"="facture/post"
+            }
+ *      },
+ *      shortname="facture",
+ *      formats={"json"}
+ * )
  *
  * @ORM\Table(name="facture", indexes={@ORM\Index(name="id_user_facture", columns={"id_user"})})
  * @ORM\Entity
  */
 class Facture
 {
+
     /**
      * @var int
      *
