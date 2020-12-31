@@ -3,19 +3,12 @@ La branche Raph
 
 Cette branche est dédiée à la mise en place de l'API User, elle renvoit les différents champs composants la table User stockés sous Mysql.
 
-Les méthodes suivantes sont implémentés:
-   -
-   -GET  /user
-   -GET  /user/{id}
-   -PUT   /user/put/{id}
-   -POST  /user/post
-   -DELETE  /user/delete/{id}
 
 API-NotrePartage
 ==
 
 L'api permet de gérer la partie back-end de l'application.
-Grâce aux méthodes implémenter dans l'API (GET,POST,PUT,DELETE) l'application pourra fournir des fonctionnalités comme :
+Grâce aux méthodes dans l'API l'application pourra fournir des fonctionnalités comme :
    -l'enregistrement des admins
    -l'inscription des bénévoles 
    -...
