@@ -1,3 +1,16 @@
+La branche Raph
+==
+
+Cette branche est dédiée à la mise en place de l'API User, elle renvoit les différents champs composants la table User stockés sous Mysql.
+
+Les méthodes suivantes sont implémentés:
+   -
+   -GET  /user
+   -GET  /user/{id}
+   -PUT   /user/put/{id}
+   -POST  /user/post
+   -DELETE  /user/delete/{id}
+
 API-NotrePartage
 ==
 
@@ -11,6 +24,7 @@ Pour lancer l'API
 ==
 
 L'API a été crée à l'aide d'API Platform de Symfony .
+On utilise Wamp et PhpMyAdmin pour la bdd.
 
 Pour lancer l'api il faut :
 
