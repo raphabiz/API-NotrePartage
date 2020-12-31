@@ -8,7 +8,8 @@ namespace App\Dto;
 
 use Doctrine\ORM\Mapping as ORM;
 
-final class UsersOutput {
+final class UserOutput
+{
     /**
      * @ORM\Column(type="json")
      */

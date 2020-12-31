@@ -13,15 +13,6 @@ use Doctrine\ORM\Mapping as ORM;
 class Registered
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id_registered", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idRegistered;
-
-    /**
      * @var \Event
      *
      * @ORM\ManyToOne(targetEntity="Event")
@@ -34,17 +25,14 @@ class Registered
     /**
      * @var \User
      *
-     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\OneToOne(targetEntity="User")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="id_volunteer", referencedColumnName="id")
      * })
      */
     private $idVolunteer;
-
-    public function getIdRegistered(): ?int
-    {
-        return $this->idRegistered;
-    }
 
     public function getIdEvent(): ?Event
     {
