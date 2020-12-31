@@ -2,18 +2,10 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- *
  * Event
- * @ApiResource(
- *    
- *     itemOperations={
- *     "get"={"path"="event/{id}"}
- *     }
- * )
  *
  * @ORM\Table(name="event")
  * @ORM\Entity

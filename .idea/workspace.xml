@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b5072-9db1-4137-bdd7-d5e8f10ed2b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DataTransformer/EventOutputDataTransformer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dto/EventOutput.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/api_assoc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/api_assoc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTransformer/UsersOutputDataTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTransformer/UsersOutputDataTransformer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,9 +133,6 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lyNNqMIAUeX3HMoY5Um4QI5nNZ" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -175,26 +170,11 @@
       <updated>1608565333468</updated>
       <workItem from="1608565334662" duration="6353000" />
       <workItem from="1609151157114" duration="6339000" />
-      <workItem from="1609259299020" duration="2661000" />
-      <workItem from="1609373408340" duration="4315000" />
+      <workItem from="1609259299020" duration="842000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1020" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609374588816">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1020" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1609374588816" />
-    <state x="1087" y="355" key="NewPhpClassDialog" timestamp="1609374018637">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1087" y="355" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1609374018637" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1609375500478">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1609375500478" />
   </component>
 </project>

@@ -23,7 +23,7 @@ class UsersOutputDataTransformer extends AbstractController implements DataTrans
         $idUser = $data->getIdUser();
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQueryBuilder();
-        $query->select('e.iduser,u.firstname,u.lastname,u.phonenumber,u.password,u.isvolunteer,u.emailadress');
+        $query->select('u.iduser,u.firstname,u.lastname,u.phonenumber,u.password,u.isvolunteer,u.emailadress');
         $query->from(AssocUsers::class, 'u');
         $query->andWhere('u.iduser =' . $idUser);
         $qb = $query->getQuery();
