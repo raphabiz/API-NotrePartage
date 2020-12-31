@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b5072-9db1-4137-bdd7-d5e8f10ed2b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTransformer/UsersOutputDataTransformer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Dto/UsersOutput.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/AssocUsers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UsersRepository.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,10 +158,23 @@
       <workItem from="1609172127832" duration="1339000" />
       <workItem from="1609253564918" duration="6132000" />
       <workItem from="1609321009613" duration="13837000" />
+      <workItem from="1609409132349" duration="2394000" />
     </task>
+    <task id="LOCAL-00001" summary="2.1 fix bug facture">
+      <created>1609409425821</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609409425821</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2.1 fix bug facture" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.1 fix bug facture" />
   </component>
 </project>
