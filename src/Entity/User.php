@@ -6,20 +6,26 @@ use Doctrine\ORM\Mapping as ORM;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Dto\UserOutput;
+use App\Dto\UserEventsOutput;
 
 /**
  * User
  *
  * @ApiResource(
- *     output=UserOutput::class,
  *     itemOperations={
- *         "get"={"path"="user/{id}"},
- *         "put"={"path"="user/put/{id}"},
- *         "delete"={"path"="user/delete/{id}"}
+ *          "getAllUserEvents"={
+ *              "method"="GET",
+ *              "path"="user/getUserEvents/{id}",
+ *              "output"=UserEventsOutput::class
+ *              },
+ *         "get"={"path"="user/{id}", "output"=UserOutput::class},
+ *         "put"={"path"="user/put/{id}",  "output"=UserOutput::class},
+ *         "delete"={"path"="user/delete/{id}",  "output"=UserOutput::class},
+ *          
  *     },
  *     collectionOperations={
- *            "get"={"path"="user"},
- *            "post"={"path"="user/post"}
+ *            "get"={"path"="user",  "output"=UserOutput::class},
+ *            "post"={"path"="user/post",  "output"=UserOutput::class}
  *     },
  *     shortname="user",
  *     formats={"json"}

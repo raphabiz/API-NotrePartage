@@ -3,9 +3,35 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
+use App\Dto\RegisteredOutput;
 
 /**
  * Event
+ * 
+ * @ApiResource(
+ *      itemOperations={
+ *             "getRegisteredEvent"={
+ *              "method"="GET",
+ *              "path"="registeredEvent/{id}",
+ *              "output"=RegisteredOutput::class,
+ *              },
+ *          "get"={"path"="event/{id}"},
+ *          "put"={"path"="event/put/{id}"},
+ *          "delete"={"path"="event/delete/{id}"}
+ *            },
+ * 
+ *      collectionOperations={
+ *              "post"={
+ *              "method"="POST",
+ *              "path"="registered/post" 
+ *              }
+ *         },
+ * 
+ *              shortname="event",
+ *              formats={"json"}            
+ *              
+ * )
  *
  * @ORM\Table(name="event")
  * @ORM\Entity
