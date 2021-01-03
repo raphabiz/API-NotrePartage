@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="307b5072-9db1-4137-bdd7-d5e8f10ed2b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DataTransformer/TasksOutputDataTransformer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dto/TasksOutput.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataTransformer/EventOutputDataTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTransformer/EventOutputDataTransformer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataTransformer/EventOutputDataTransformer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataTransformer/TasksOutputDataTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTransformer/TasksOutputDataTransformer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dto/EventOutput.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Event.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Tasks.php" afterDir="false" />
     </list>
@@ -183,10 +183,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1020" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609617982759">
+    <state x="1020" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609626352233">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="1020" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1609617982759" />
+    <state x="1020" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1609626352233" />
     <state x="1087" y="355" key="NewPhpClassDialog" timestamp="1609617855069">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

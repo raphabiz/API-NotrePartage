@@ -19,7 +19,8 @@ use App\Dto\TasksOutput;
  *            "get"={"path"="tasks"},
  *            "post"={"path"="tasks/post"}
  *     },
- *     shortname="tasks"
+ *     shortname="tasks",
+ *     formats={"json"}
  * )
  *
  *

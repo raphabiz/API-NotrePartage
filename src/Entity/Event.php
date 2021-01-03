@@ -4,24 +4,12 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
-use App\Dto\EventOutput;
+
 /**
  *
  *
  * Event
- * @ApiResource(
- *     output=EventOutput::class,
- *     itemOperations={
- *          "get"={"path"="event/{id}"},
- *          "put"={"path"="event/put/{id}"},
- *          "delete"={"path"="event/delete/{id}"}
- *     },
- *     collectionOperations={
- *            "get"={"path"="event"},
- *            "post"={"path"="event/post"}
- *     },
- *     shortname="event"
- * )
+
  *
  * @ORM\Table(name="event")
  * @ORM\Entity
