@@ -31,8 +31,7 @@ class TasksOutputDataTransformer extends AbstractController implements DataTrans
         $query->andWhere('tg.idEvent = e.id');
         $query->andWhere('t.idTaskgroup = tg.idTaskgroup');
         $query->andWhere('e.id =' . $idEvent);
-        $qb = $query->getQuery();
-        $result = $qb->getResult();
+        
 
         $qb = $query->getQuery();
         $result = $qb->getResult();
