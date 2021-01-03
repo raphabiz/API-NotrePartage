@@ -5,6 +5,8 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ *
+ *
  * Event
  *
  * @ORM\Table(name="event")

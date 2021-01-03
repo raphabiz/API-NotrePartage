@@ -2,10 +2,28 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
-
+use App\Dto\TasksOutput;
 /**
  * Tasks
+ *
+ * @ApiResource(
+ *     output=TasksOutput::class,
+ *     itemOperations={
+ *          "get"={"path"="tasks/{id}"},
+ *          "put"={"path"="tasks/put/{id}"},
+ *          "delete"={"path"="tasks/delete/{id}"}
+ *     },
+ *     collectionOperations={
+ *            "get"={"path"="tasks"},
+ *            "post"={"path"="tasks/post"}
+ *     },
+ *     shortname="tasks",
+ *     formats={"json"}
+ * )
+ *
+ *
  *
  * @ORM\Table(name="tasks", indexes={@ORM\Index(name="id_taskgroup", columns={"id_taskgroup"})})
  * @ORM\Entity
