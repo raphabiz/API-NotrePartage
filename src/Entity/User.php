@@ -7,20 +7,6 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * User
  *
- * @ApiResource(
- *     output=UserOutput::class,
- *     itemOperations={
- *         "get"={"path"="user/{id}"},
- *         "put"={"path"="user/put/{id}"},
- *         "delete"={"path"="user/delete/{id}"}
- *     },
- *     collectionOperations={
- *            "get"={"path"="user"},
- *            "post"={"path"="user/post"}
- *     },
- *     shortname="user",
- *     formats={"json"}
- * )
  *
  * @ORM\Table(name="user")
  * @ORM\Entity
