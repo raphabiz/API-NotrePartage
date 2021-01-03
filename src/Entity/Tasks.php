@@ -11,13 +11,10 @@ use App\Dto\TasksOutput;
  * @ApiResource(
  *     output=TasksOutput::class,
  *     itemOperations={
- *          "get"={"path"="tasks/{id}"},
- *          "put"={"path"="tasks/put/{id}"},
- *          "delete"={"path"="tasks/delete/{id}"}
+ *          "get"={"path"="tasks/{id}"}
  *     },
  *     collectionOperations={
- *            "get"={"path"="tasks"},
- *            "post"={"path"="tasks/post"}
+ *            "get"={"path"="tasks"}
  *     },
  *     shortname="tasks",
  *     formats={"json"}
