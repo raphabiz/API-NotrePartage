@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
-    <list default="true" id="307b5072-9db1-4137-bdd7-d5e8f10ed2b4" name="Default Changelist" comment="">
+    <list default="true" id="e8b0e127-236d-436a-91fa-dcd1a5a0569c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataTransformer/TasksOutputDataTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTransformer/TasksOutputDataTransformer.php" afterDir="false" />
-
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +158,6 @@
       <option name="presentableId" value="Default" />
       <updated>1608565333468</updated>
       <workItem from="1608565334662" duration="6353000" />
-
       <workItem from="1609151157114" duration="7361000" />
       <workItem from="1609172127832" duration="1339000" />
       <workItem from="1609253564918" duration="6132000" />
@@ -179,10 +177,8 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.1 fix bug facture" />
     <option name="LAST_COMMIT_MESSAGE" value="2.1 fix bug facture" />
-
   </component>
 </project>

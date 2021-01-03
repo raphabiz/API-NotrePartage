@@ -70,7 +70,7 @@ class TasksOutputDataTransformer extends AbstractController implements DataTrans
         }
 
         // to respect HATEOAS rules
-        $prefix = "http://127.0.0.1:8001/";
+        $prefix = "http://127.0.0.1:8000/";
         $chaine = (string)$idEvent;
         $allTasks = ['rel' => 'all-tasks', 'href' => $prefix . "api/tasks/"];
         $selfTasks = ['rel' => 'self', 'href' => $prefix . "api/tasks/" . $chaine];
