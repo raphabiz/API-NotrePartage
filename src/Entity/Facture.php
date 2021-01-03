@@ -40,7 +40,7 @@ class Facture
      *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_user", referencedColumnName="id")
+     *  @ORM\JoinColumn(name="id_user", referencedColumnName="id")
      * })
      */
     private $idUser;

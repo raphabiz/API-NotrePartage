@@ -2,14 +2,12 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  *
  *
  * Event
-
  *
  * @ORM\Table(name="event")
  * @ORM\Entity

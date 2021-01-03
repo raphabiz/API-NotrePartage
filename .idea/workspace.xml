@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="307b5072-9db1-4137-bdd7-d5e8f10ed2b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataTransformer/TasksOutputDataTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataTransformer/TasksOutputDataTransformer.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -145,22 +150,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="307b5072-9db1-4137-bdd7-d5e8f10ed2b4" name="Default Changelist" comment="" />
@@ -169,31 +159,30 @@
       <option name="presentableId" value="Default" />
       <updated>1608565333468</updated>
       <workItem from="1608565334662" duration="6353000" />
-      <workItem from="1609151157114" duration="6339000" />
-      <workItem from="1609259299020" duration="2661000" />
-      <workItem from="1609373408340" duration="8870000" />
+
+      <workItem from="1609151157114" duration="7361000" />
+      <workItem from="1609172127832" duration="1339000" />
+      <workItem from="1609253564918" duration="6132000" />
+      <workItem from="1609321009613" duration="13837000" />
+      <workItem from="1609409132349" duration="2394000" />
     </task>
+    <task id="LOCAL-00001" summary="2.1 fix bug facture">
+      <created>1609409425821</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609409425821</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="1020" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609626352233">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1020" y="296" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1609626352233" />
-    <state x="1087" y="355" key="NewPhpClassDialog" timestamp="1609617855069">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1087" y="355" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1609617855068" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1609375500478">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1080@0.0.1920.1080" timestamp="1609375500478" />
-    <state x="953" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1609615594056">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="953" y="257" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1609615594056" />
+
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2.1 fix bug facture" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.1 fix bug facture" />
+
   </component>
 </project>

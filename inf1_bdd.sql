@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3308
--- Généré le :  mar. 29 déc. 2020 à 16:26
--- Version du serveur :  8.0.18
--- Version de PHP :  7.4.3-dev
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  jeu. 31 déc. 2020 à 11:35
+-- Version du serveur :  5.7.23
+-- Version de PHP :  7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,8 +19,26 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `inf1-bdd`
+-- Base de données :  `inf1_bdd`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `assoc_users`
+--
+
+DROP TABLE IF EXISTS `assoc_users`;
+CREATE TABLE IF NOT EXISTS `assoc_users` (
+  `idUser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lastName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phoneNumber` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` text COLLATE utf8mb4_unicode_ci,
+  `isVolunteer` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `emailAdress` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`idUser`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -51,7 +69,14 @@ CREATE TABLE IF NOT EXISTS `facture` (
   `id_user` int(10) NOT NULL,
   PRIMARY KEY (`id_facture`),
   KEY `id_user_facture` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `facture`
+--
+
+INSERT INTO `facture` (`id_facture`, `link`, `date`, `id_user`) VALUES
+(1, 'zzz.jpg', '1999-01-01 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -61,10 +86,9 @@ CREATE TABLE IF NOT EXISTS `facture` (
 
 DROP TABLE IF EXISTS `registered`;
 CREATE TABLE IF NOT EXISTS `registered` (
-  `id_registered` int(10) NOT NULL AUTO_INCREMENT,
   `id_volunteer` int(10) NOT NULL,
   `id_event` int(10) NOT NULL,
-  PRIMARY KEY (`id_registered`),
+  PRIMARY KEY (`id_volunteer`),
   KEY `id_volunteer` (`id_volunteer`),
   KEY `id_event` (`id_event`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -116,7 +140,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `is_admin` tinyint(1) NOT NULL DEFAULT '0',
   `is_verified` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `first_name`, `last_name`, `email`, `phone_number`, `is_admin`, `is_verified`) VALUES
+(1, 'raph', 'monpassword', 'raph', 'abiz', 'raphabiz@gmail.com', 142536543, 1, 0),
+(2, 'jeandu40', 'mdp', 'jean', 'valjean', 'jean@valjean.fr', 609087654, 0, 0);
 
 --
 -- Contraintes pour les tables déchargées
