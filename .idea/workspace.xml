@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8b0e127-236d-436a-91fa-dcd1a5a0569c" name="Default Changelist" comment="" />
+    <list default="true" id="e8b0e127-236d-436a-91fa-dcd1a5a0569c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,14 +144,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../umlapp/ModelingWebApp" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="307b5072-9db1-4137-bdd7-d5e8f10ed2b4" name="Default Changelist" comment="" />
+      <changelist id="e8b0e127-236d-436a-91fa-dcd1a5a0569c" name="Default Changelist" comment="" />
       <created>1608565333468</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -160,6 +162,9 @@
       <workItem from="1609253564918" duration="6132000" />
       <workItem from="1609321009613" duration="13837000" />
       <workItem from="1609409132349" duration="2394000" />
+      <workItem from="1609837349701" duration="9000" />
+      <workItem from="1609863585102" duration="599000" />
+      <workItem from="1609946265753" duration="107000" />
     </task>
     <task id="LOCAL-00001" summary="2.1 fix bug facture">
       <created>1609409425821</created>
@@ -175,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609686577605</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add tasgroup entity">
+      <created>1609686807692</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609686807692</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +196,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.1 fix bug facture" />
     <MESSAGE value="Merge remote-tracking branch 'origin2/thanh'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin2/thanh'" />
+    <MESSAGE value="add tasgroup entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tasgroup entity" />
   </component>
 </project>

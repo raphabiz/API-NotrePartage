@@ -22,6 +22,10 @@ use App\Dto\RegisteredOutput;
  *            },
  * 
  *      collectionOperations={
+ *              "get"={
+ *              "method"="GET",
+ *              "path"="event"
+ *              },
  *              "post"={
  *              "method"="POST",
  *              "path"="registered/post" 
